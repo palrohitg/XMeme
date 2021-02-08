@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, jsonify, Response
 import json
 import os
 import ast
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 
@@ -21,6 +22,7 @@ meme = db['meme']
 
 # Get all the meme details
 @app.route("/")
+@cross_origin()
 def home():
     documents = meme.find({})
     response = [{item: data[item] for item in data if item != '_id'}
@@ -32,21 +34,34 @@ def home():
 
 # Post API
 @app.route("/memes", methods=['POST'])
+@cross_origin()
 def create_meme():
-    data = request.json
-    if data is None or data == {} or 'Document' not in data:
-        return Response(response=json.dumps({"Error": "Please provide connection information"}),
-                        status=400,
-                        mimetype='application/json')
+    content = request.get_json(force=True)
+    meme_url = content['meme_url']
+    meme_owner = content['meme_owner']
+    meme_caption = content['meme_caption']
 
-    response = meme.insert_one(data['Document'])
-    output = {'Status': 'Successfully Inserted',
-              'Document_ID': str(response.inserted_id)}
-    response = output
+    # Insert into database
+    meme.insert_one({"id ": meme.find().count()+1, "meme_owner": meme_owner,
+                     "meme_caption": meme_caption, "meme_url": meme_url})
+
+    resp = jsonify('User added successfully!')
+    resp.status_code = 200
+    return resp
+
+
+@app.route("/memes/<id>", methods=["GET"])
+def get_meme_by_id(id):
+    documents = meme.find({"id": id})
+    print(documents)
+    for data in documents:
+        print(data)
+    response = [{item: data[item] for item in data if item != '_id'}
+                for data in documents]
     return Response(response=json.dumps(response),
                     status=200,
                     mimetype='application/json')
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
