@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Scrapper</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}">
+
+</head>
+
+<body>
+    <!-- ======= navbar part ====== -->
+    <!-- ======= navbar part ====== -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #322348;">
+        <a class="navbar-brand" href="/">XMeme</a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01" style="padding: 0px 20px;">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <!-- <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/palrohitg">Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/vikas-pal-b17479150/">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ========= navbar area ends here ========= -->
+    <!-- ############# copy till here as a commmon code in all parts ############ -->
+
+    <div class="jumbotron">
+        <h1 class="display-4">About XMEME</h1>
+        <p class="lead">XMEME is a web based application which is primarly used to store the meme, 
+            fetch the meme, and update a particular meme by url and caption. All the operation can be 
+            performed using RESTFUL API structure. 
+        </p>
+        <hr class="my-4">
+        <p class="lead"><b>Technologies Used:</b></p>
+        <ul>
+            <li>Flask</li>
+            <li>MongoDB</li>
+            <li>HTML</li>
+            <li>Python</li>
+            <li>Heroku</li>
+            <li>Bootstrap</li>
+        </ul>
+        <br><br>
+        <div class="card">
+            <h5 class="card-header text-center">About Author</h5>
+            <div class="card-body author">
+                <div class="row no-gutters">
+                    <div class="col-md-3 col-sm-12 author-img">
+                        <img src="static/images/vikaspal.jpg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-9 col-sm-12">
+                        <div class="card-body">
+                            <h2 class="card-title">Vikas Pal</h2>
+                            <hr class="my-4">
+                            <p class="card-text text-justify desc">
+                                Hi, I'm Vikas Pal. I'm currently in Second Year (Computer Science Student).I'm
+                                looking for SDE Intern opportunity. Ask me about full-stack, Data structure and
+                                algorthims, DevOps, Python. Language doesn't matter to me. I'll explore as needed.
+                            </p>
+                            <ul id="profile-links">
+                                <li>
+                                    <a class="link-icon" href="https://github.com/palrohitg/reviewscrapper"><i
+                                            class="fa fa-github"></i></a>
+                                </li>
+                                <li>
+                                    <a class="link-icon" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a class="link-icon" href="https://instagram.com"><i
+                                            class="fa fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a class="link-icon" href="https://www.linkedin.com/in/vikas-pal-b17479150/"><i
+                                            class="fa fa-linkedin-square"></i></a>
+                                </li>
+                                <li>
+                                    <a href class="link-icon" href="mailto: rohitprotobit@gmail.com"><i
+                                            class="fa fa-envelope-open" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- ============ Bootstrap JS =========== -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
