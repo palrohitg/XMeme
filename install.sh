@@ -4,10 +4,11 @@
 
 # Any installation related commands
 
-sudo apt-get install python3.6
+sudo apt-get install python3
 python3 -m pip install --user virtualenv
 python3 -m venv env
-source env/bin/activate
+source env/bin/activate 
+pip install -r requirements.txt
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
 
