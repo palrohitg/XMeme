@@ -11,14 +11,14 @@ from flask_pymongo import PyMongo
 app = Flask(__name__)
 
 # Local Data-Base Connection
-# app.config["MONGO_URI"] = "mongodb://localhost:27017/XMEME"
+app.config["MONGO_URI"] = "mongodb://localhost:27017/XMEME"
 
 # Cloud Data-Base Connection
-username = urllib.parse.quote_plus('root')
-password = urllib.parse.quote_plus("root1234")
-url = "mongodb+srv://{}:{}@cluster0.o2yph.mongodb.net/XMEME?retryWrites=true&w=majority".format(
-    username, password)
-app.config["MONGO_URI"] = url
+# username = urllib.parse.quote_plus('root')
+# password = urllib.parse.quote_plus("root1234")
+# url = "mongodb+srv://{}:{}@cluster0.o2yph.mongodb.net/XMEME?retryWrites=true&w=majority".format(
+#     username, password)
+# app.config["MONGO_URI"] = url
 
 mongo = PyMongo(app)
 
