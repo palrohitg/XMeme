@@ -5,14 +5,14 @@
 
 ## :pushpin: Introduction 
 
-ReviewScrapper is a web based application which is primarly used to scraps the reviews for a particualar products from Ecommerce websites and save the reviews in the csv format that can be further used for Data-Analysis. ReviewScrapper also allows user to limit the reviews based on the Data requirement and scraps the reviews from the multiple pages.
+XMEME is a web-app which allow the user to post meme by name,url caption and also to fetch the meme by id or whole. 
+XMEME is a RESTFUL API which allow to use the endpoints to consume the resources. 
 :arrow_right: Live :beers:[vikas-review-scrapper](https://vikas-webscrappper-review.herokuapp.com/) :beers:
 
 ## :computer: Tech Stack
     
 * [Flask](https://flask.palletsprojects.com/)
 * [MonogDB](https://www.mongodb.com/)
-* [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/doc)
 * [Python](https://www.python.org/)
 * [Heroku](https://www.heroku.com/)
 * [Bootstrap](https://getbootstrap.com/)
@@ -24,13 +24,12 @@ ReviewScrapper is a web based application which is primarly used to scraps the r
 
          git clone https://github.com/palrohitg/reviewscrapper.git
 
-2. Make a virtual environment mandatory: 
+2. Run the test_server.sh file if you have  
 
-         * install pip, pipenv
-         * Python -m venv virtual_env_name
-         * make the virtual env and activate it 
+         chmod +x test_server.sh 
+         sh test_server.sh 
 
-3. Install the Packages: 
+3. It will run install.sh and server_run.sh 
 
         pip install -r requirements.txt
 
