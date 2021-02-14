@@ -43,4 +43,4 @@ XMEME is a RESTFUL API which allow to use the endpoints to consume the resources
 
 ## 📜 LICENSE
 
-  [MIT]() 
+  [MIT](https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/rohitprotobit-me_buildout_xmeme/-/blob/main/LICENSE) 
