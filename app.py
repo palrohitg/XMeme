@@ -1,4 +1,3 @@
-import pymongo
 from pymongo import MongoClient
 import urllib.parse
 from flask import Flask, render_template, request, jsonify, Response, redirect, url_for
