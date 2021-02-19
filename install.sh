@@ -1,11 +1,7 @@
 #!/bin/bash
 
-
-# Any installation related commands
-
 sudo apt-get install python3
-sudo apt-get install python3-venv
-python3 -m venv env
+sudo python3 -m pip install --upgrade pip
 pip3 install -r requirements.txt 
 
 
