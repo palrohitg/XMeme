@@ -24,7 +24,7 @@ XMEME is a RESTFUL API which allow to use the endpoints to consume the resources
 
 1. Clone the repository by using Git Client: 
 
-         git clone https://github.com/palrohitg/reviewscrapper.git
+         git clone https://github.com/palrohitg/XMeme.git
 
 2. Run the test_server.sh file if you have  
 
@@ -39,4 +39,4 @@ XMEME is a RESTFUL API which allow to use the endpoints to consume the resources
 
 ## 📜 LICENSE
 
-  [MIT](https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/rohitprotobit-me_buildout_xmeme/-/blob/main/LICENSE) 
+  [MIT](https://github.com/palrohitg/XMeme/blob/main/LICENSE) 
