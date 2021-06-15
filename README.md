@@ -20,6 +20,11 @@ XMEME is a RESTFUL API which allow to use the endpoints to consume the resources
 * PATCH : To update the existing meme by url , captions
 * GET by id : To fetch the meme by id 
 
+  ```python
+        @app.route("/memes", methods=['GET', 'POST'])
+        @app.route("/memes/<int:id>", methods=["GET", "PATCH"])
+  ```
+
 ## :running_woman: Local Installation Guide : 
 
 1. Clone the repository by using Git Client: 
